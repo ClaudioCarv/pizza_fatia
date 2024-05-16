@@ -1,0 +1,26 @@
+
+#loader{
+    background-color: #F1B020;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: subir 0.5s forwards;
+    animation-delay: 2s;
+}
+
+
+
+.logo{
+    width: 20%;
+}
+
+@keyframes subir {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}

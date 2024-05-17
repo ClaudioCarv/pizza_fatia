@@ -1,4 +1,43 @@
 
+body{
+    font-family: "Inknut Antiqua", serif;
+    background-color: #F5DFAD;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+}
+
+h1{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    margin-top: -15%;
+}
+.logo{
+    width: 20%;
+}
+
+.logoS{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 15%;
+    align-content: center;
+    margin-top: 50px;
+}
+
+.t1{
+    justify-content: center;
+    display: flex;
+    margin-top: -15px;
+    margin-bottom: 50px;
+    font-size: 250%;
+}
 #loader{
     background-color: #F1B020;
     position: fixed;
@@ -11,16 +50,95 @@
     align-items: center;
     z-index: 9999;
     animation: subir 0.5s forwards;
-    animation-delay: 2s;
+    animation-delay: 1.3s;
+}
+.naveg{
+    top: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    display: flex;
+    justify-content: center;
+    background-color: #2A5237;
+
+}
+.naveg, a{
+    color: aqua;
+    padding-left: 10px;
 }
 
-
-
-.logo{
-    width: 20%;
+.naveg, a:hover{
+    transition: ease-in-out 1s;
+    color: #F1B020;
+}
+.sabores{
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    margin-top: 10px;
+}
+.saboresitem{
+    text-align: center;
+    margin: 0 20px;
+}
+.saboresitem, h2{
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
-@keyframes subir {
+.sabimg{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    display: inline-block;
+    align-items: center;
+    padding: 10px 10px 15px 20px;
+    box-sizing: border-box;
+    background: #F8E8C4;
+    backdrop-filter: blur(2px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: black;
+    
+  }
+  
+  .sabimg:hover{
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.22);
+    background-color: #F3C35F;
+    border: 1px solid #ad956179;
+    transform: scale(1.05);
+    animation: pulsa 0.7s ease-out infinite alternate-reverse;
+  }
+  
+  .sabimg:active{
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+  .spans{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 9999;
+}
+@keyframes subir{
     0% { transform: translateY(0); }
     100% { transform: translateY(-100%); }
+}
+
+@keyframes pulsa {
+    to {
+        transform: scale(1.1); 
+    }
 }

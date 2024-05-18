@@ -16,7 +16,7 @@ h1{
     justify-content: center;
 }
 h3{
-    margin-top: -15%;
+    margin-top: -25px;
 }
 .logo{
     width: 20%;
@@ -38,6 +38,11 @@ h3{
     margin-bottom: 50px;
     font-size: 250%;
 }
+
+.titulos{
+    margin-top: 20px;
+    margin-bottom: 3%;
+}
 #loader{
     background-color: #F1B020;
     position: fixed;
@@ -50,7 +55,7 @@ h3{
     align-items: center;
     z-index: 9999;
     animation: subir 0.5s forwards;
-    animation-delay: 1.3s;
+    animation-delay: 1.5s;
 }
 .naveg{
     top: 0;
@@ -92,6 +97,7 @@ h3{
 }
 
 .sabimg{
+    border: 1px solid #000;
     width: 200px;
     height: 200px;
     background-size: cover;
@@ -132,6 +138,83 @@ h3{
     text-align: center;
     z-index: 9999;
 }
+
+button {
+    margin-top: 1px;
+    padding: 1.3em 3em;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #F8E8C4;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+button, a{
+    font-family: "Inknut Antiqua", serif;
+}
+  
+button:hover {
+    background-color: #2A5237;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+  
+button:active {
+    transform: translateY(-1px);
+}
+
+.recheios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 25px;
+    padding: 5px 1px 0px 5px;
+    background: #F8E8C4;
+    border: 1px solid #000;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+.sprecheios{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    align-items: center;
+    padding: 10px 10px 15px 20px;
+    box-sizing: border-box;
+    background: #F8E8C4;
+    backdrop-filter: blur(2px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: black;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+.sprecheios:hover{
+    padding: 0px 5px 0px 5px;
+    border-radius: 17px;
+    border: 1px solid  #000;
+    background-color: #F3C35F;
+}
+.sprecheios:active{
+    transform: translateY(-15px);
+}
+
 @keyframes subir{
     0% { transform: translateY(0); }
     100% { transform: translateY(-100%); }

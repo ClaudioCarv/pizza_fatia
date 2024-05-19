@@ -6,8 +6,7 @@
     link
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="toolkit.css">
-    <script src="script.js"></script>
-    <script src="cart.js"></script>
+    <script src="pedido.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,12 +24,18 @@
     </div>
     
     <h1 class="t1">Seu Pedido</h1>
-    <h1 class="saboresitem">Produtos</h1>
+    
+    <h1 class="saboresitem">Pedidos</h1>
+    <div class="pedidos">
 
-    <id id="cart">
-        <ul id="cart-itens">
-        </ul>
-    </id>
+        <div class="order">
+        
+        </div>
+    </div>
+    <h2>Total: R$<span id="total-amount">0</span></h2>
+    <div class="prosseguir">
+        <button id="clear-order">Limpar Pedido</button>
+    </div>
     <h2>Recheios de borda</h2>
     <div class="recheios">
         <span>Catupiry</span>
@@ -38,9 +43,12 @@
         <span>Cheddar</span>
         <span>Nenhum</span>
     </div>
+    <!-- Adicionais e Molhos -->
+    <!-- Adicionais -->
     <div class="space">
         <div class="adds">
             <h2>Adicionais</h2>
+            <hr>
             <div class="spadds">
                 <span>Queijo</span>
                 <span>Tomate</span>
@@ -51,8 +59,10 @@
                 <span>Cream Cheese</span>
             </div>
         </div>
+        <!-- Molhos -->
         <div class="adds">
             <h2>Molhos</h2>
+            <hr>
             <div class="spadds">
                 <span>Maionese</span>
                 <span>Geleia de Pimenta</span>
@@ -63,6 +73,7 @@
         </div>
     </div>
     <div class="prosseguir">
+        <!-- Ir para a pagina do carrinho -->
         <a href="carrinho.html"><button>Prosseguir</button></a>
     </div>
         

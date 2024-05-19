@@ -10,91 +10,97 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/Tia-fatia-logo.png" type="image/x-icon"> 
+
     <title>Tia Fatia</title>
 </head>
 <body>
+    <!-- Tela de carregamento com logo -->
     <div  id="loader">
         <img class="logo" src="img/Tia-fatia-logo.png" alt="logo tia fatia">
     </div>
-
+<!-- Navegação -->
     <nav class="naveg">
         <a href="#home">Home</a>
         <a href="pedido.html">Pedido</a>
         <a href="#Sobre">Sobre</a>
     </nav>
-    
+    <!-- Tela de sabores -->
     <div id="home" class="sabores">
         <img class="logoS" src="img/logoS.png" alt="">
     </div>
-
+<!-- Salgados -->
     <h1 class="t1">Sabores</h1>
-
+    
     <h1 class="saboresitem">Salgados</h1>
     <div class="sabores">
-        <div class="saboresitem">
-            <img class="sabimg" src="img/fatia_calabresa.png" alt="">
-            <div class="produto">
+        <div class="saboresitem" data-name="Calabresa" data-price="5.99">
+            <img class="sabimg" src="img/fatia_calabresa.png" alt="fatia de pizza Calabresa">
                 <h2>Calabresa</h2>
                 <h3>R$ 5.99</h3>
-                <button class="add-to-cart" data-product="Fatia de Calabresa">Adicionar ao Pedido</button>
-            </div>
+                <button class="add-to-cart"  onclick="addToCart('Fatia de Calabresa', 5.99), exibirPopUp()">Adicionar ao Pedido</button>
         </div>
-        <div class="saboresitem">
-            <img class="sabimg" src="img/fatia_marguerita.png" alt="">
+        <div class="saboresitem" data-name="Marguerita" data-price="6.25">
+            <img class="sabimg" src="img/fatia_marguerita.png" alt="fatia de pizza Marguerita">
             <h2>Marguerita</h2>
             <h3>R$ 6.50</h3>
-            <button class="add-to-cart" data-product="Fatia de Marguerita">Adicionar ao Pedido</button>
+            <button class="add-to-cart" onclick="addToCart('Fatia de Marguerita', 6.50)">Adicionar ao Pedido</button>
         </div>
-        <div class="saboresitem">
-            <img class="sabimg" src="img/fatia_queijo.png" alt="">
+        <div class="saboresitem" data-name="Queijo" data-price="6.25">
+            <img class="sabimg" src="img/fatia_queijo.png" alt="Fatia de pizza de Queijo">
             <h2>Queijo</h2>
             <h3>R$ 6.25</h3>
-            <button class="add-to-cart" data-product="Fatia de Queijo">Adicionar ao Pedido</button>
+            <button class="add-to-cart" onclick="addToCart('Fatia de Queijo', 25)">Adicionar ao Pedido</button>
         </div>
     </div>
+    <!-- Doces -->
     <h1 class="titulos">Doces</h1>
     <div class="saboresitem">
         <div class="sabores">
-            <div class="saboresitem">
-                <img class="sabimg" src="img/fatia_doce_chocolate.png" alt="">
+            <div class="saboresitem" data-name="Queijo" data-price="6.25">
+                <img class="sabimg" src="img/fatia_doce_chocolate.png" alt="Fatia de pizza de Chocolate">
                 <h2>Chocolate</h2>
                 <h3>R$ 8.95</h3>
-                <button class="add-to-cart" data-product="Fatia de Chocolate">Adicionar ao Pedido</button>
+                <button class="add-to-cart" onclick="addToCart('Fatia de Chocolate', 8.95)">Adicionar ao Pedido</button>
             </div>
-            <div class="saboresitem">
-                <img class="sabimg" src="img/fatia_doce_morango.jpg" alt="">
+            <div class="saboresitem" data-name="Queijo" data-price="6.25">
+                <img class="sabimg" src="img/fatia_doce_morango.jpg" alt="Fatia de pizza de Morango">
                 <h2>Morango</h2>
                 <h3>R$ 10.25</h3>
-                <button class="add-to-cart" data-product="Fatia de Morango">Adicionar ao Pedido</button>
+                <button class="add-to-cart" onclick="addToCart('Fatia de Morango', 10.25)">Adicionar ao Pedido</button>
             </div>
-            <div class="saboresitem">
-                <img class="sabimg" src="img/fatia_doce_romeu.png" alt="">
+            <div class="saboresitem" data-name="Queijo" data-price="6.25">
+                <img class="sabimg" src="img/fatia_doce_romeu.png" alt="Fatia de pizza Romeu e Julieta">
                 <h2>Romeu e Julieta</h2>
                 <h3>R$ 9.50</h3>
-                <button class="add-to-cart" data-product="Fatia deRomeu e Julieta">Adicionar ao Pedido</button>
+                <button class="add-to-cart" onclick="addToCart('Fatia de pizza Romeu e Julieta', 9.50)">Adicionar ao Pedido</button>
             </div>
         </div>
     </div>
+    <!-- Combos -->
     <h1 class="titulos">Combos</h1>
     <div class="saboresitem">
         <div class="sabores">
             <div class="saboresitem">
-                <img class="sabimg" src="img/combos_fundo.png" alt="">
+                <img class="sabimg" src="img/combos_fundo.png" alt="Combo - 2 Salgados + Refrigerante">
                 <h2>2 Salgados + Refri</h2>
                 <h3>R$ 8.50</h3>
+                <button class="add-to-cart"  onclick="addToCart('Combo - 2 Salgados + Refrigerante', 8.50), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
             <div class="saboresitem">
-                <img class="sabimg" src="img/combos_fundo.png" alt="">
+                <img class="sabimg" src="img/combos_fundo.png" alt="Combo - 2 Doces + 1 Salgado + Suco">
                 <h2>2 Doces + 1 Salgado + Suco</h2>
                 <h3>R$ 10.00</h3>
+                <button class="add-to-cart"  onclick="addToCart('Combo - 2 Doces + 1 Salgado + Suco', 10.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
             <div class="saboresitem">
-                <img class="sabimg" src="img/combos_fundo.png" alt="">
+                <img class="sabimg" src="img/combos_fundo.png" alt="Combo - 1 Doce + Bebida">
                 <h2>1 Doce + Bebida</h2>
                 <h3>R$ 6.00</h3>
+                <button class="add-to-cart"  onclick="addToCart('Combo - 1 Doce + Bebida', 6.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
         </div>
     </div>
+    <!-- Bebidas -->
     <h1 class="titulos">Bebidas</h1>
     <div class="saboresitem">
         <div class="sabores">
@@ -102,16 +108,19 @@
                 <img class="sabimg" src="img/copo_refrigerante.png" alt="">
                 <h2>Refrigerante</h2>
                 <h3>R$ 3.00</h3>
+                <button class="add-to-cart"  onclick="addToCart('Dollynho', 3.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
             <div class="saboresitem">
                 <img class="sabimg" src="img/Sucos_naturais.png" alt="">
                 <h2>Sucos naturais</h2>
                 <h3>R$ 4.00</h3>
+                <button class="add-to-cart"  onclick="addToCart('Suco de Maracuja', 4.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
             <div class="saboresitem">
                 <img class="sabimg" src="img/vinho.png" alt="">
                 <h2>Vinhos</h2>
                 <h3>R$ 50.00</h3>
+                <button class="add-to-cart"  onclick="addToCart('Vinho', 50.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
         </div>
     </div>

@@ -25,3 +25,5 @@ function addToCart(name, price) {
         console.log(JSON.parse(localStorage.getItem('cart')));
     }
 }
+
+

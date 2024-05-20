@@ -352,6 +352,177 @@ hr{
     background-color: #F3C35F;
 }
 
+.cpedido{
+    margin: 0px 500px 0px 0px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cpedido p{
+    margin: 0px 10px 0px 0px;
+    color: #2A5237;
+}
+.cpedido span{
+    margin: 0px 10px 0px 10px;
+    font-size: 22px;
+    padding: 10px 10px 10px 10px;
+    transition: all 0.3s ease 0s;
+    border-radius: 15px;
+    border: none;
+    background: none;
+}
+.cpedido span:hover{
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 15px;
+    border: 1px solid  #000;
+    background-color: #F3C35F;
+}
+
+.cpedido span:active{
+    transform: translateY(-15px);
+}
+
+.cspace{
+    display: flex;
+    justify-content: center;
+}
+
+.cpedido span.cselecionado {
+    margin: 0px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 15px;
+    border: 1px solid  #000;
+    background-color: #F3C35F;
+    cursor: pointer; 
+}
+
+.container {
+    background-color:#E3C596;
+    padding: 20px 0px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.address-section, .payment-section {
+    margin: 0px 100px 0px 100px;
+    border: 1px solid #000;
+    background-color: #F8E8C4;
+    padding: 10px 0px 0px 10px;
+    border-radius: 17px;
+    cursor: pointer;
+    width: 45%;
+    position: relative;
+    transition: all 0.5s;
+}
+.payment-section:hover{
+    background-color: #F3C35F;
+}
+.address-section:hover{
+    background-color: #F3C35F;
+}
+.edit, .change {
+    color: rgb(255, 0, 0);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.payment-method {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid #000000;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+.modal-content button{
+    border-radius: 17px;
+    border: 1px solid #000;
+    font-size: 15px;
+    font-family: "Inknut Antiqua", serif;
+    margin: 10px 50px 0px 50px;
+    padding: 5px 5px 5px 0px;
+    background: none;
+    transition: all 0.5s;
+}
+.modal-content button:hover{
+    transition: all 0.5s;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: #F3C35F;
+    cursor: pointer;
+}
+.close {
+    margin: -35px 0px 0px 0px;
+    color: #ff0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#cardFields label, #cardFields input {
+    display: block;
+    width: 100%;
+}
+
+#cardFields input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 @keyframes subir{
     0% { transform: translateY(0); }
     100% { transform: translateY(-100%); }

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="toolkit.css">
-    <script src="script.js"></script>
-    <script src="cart.js"></script>
+    <script src="carrinho.js"></script>
+    <script src="pedido.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -20,6 +20,111 @@
         <a href="pedido.html">Pedido</a>
         <a href="#Sobre">Sobre</a>
     </nav>
-    <h1>Carrinho (andamento)</h1>
+
+    <div class="sabores">
+        <img class="logoS" src="img/logoS.png" alt="">
+    </div>
+
+    <h1>Carrinho</h1>
+    <div class="pedidos">
+        <div class="order"></div>
+    </div>
+    <hr>
+    <!-- total do pedido -->
+    <h2>Total: R$<span id="total-amount">0</span></h2>
+
+    <div class="cpedido">
+        <p>Seu pedido será:</p>
+        <span onclick="selecionarSpan(this)">Retirado</span>
+        <span onclick="selecionarSpan(this)">Entregue</span>
+    </div>
+    <div class="cspace">
+        <div class="container">
+            <div class="info-section">
+                <div class="address-section">
+                    <div id="addressDisplay" onclick="openModal('addressModal')">
+                        <p><strong>Endereço:</strong></p>
+                        <p>Rua dos Lírios, 89, João Pessoa, PB</p>
+                        <span class="edit">Editar</span>
+                    </div>
+                </div>
+                <div class="payment-section">
+                    <p>Método de pagamento:</p>
+                    <div id="paymentDisplay" onclick="openModal('paymentModal')">
+                        <span class="card"></span>
+                        <span class="change">trocar</span>
+                    </div>
+                    <div class="payment-method">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal para endereço -->
+        <div id="addressModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('addressModal')">&times;</span>
+                <h2>Endereço</h2>
+                <form id="addressForm">
+                    <label for="street">Rua:</label>
+                    <input type="text" id="street" name="street" placeholder="Digite a rua" required>
+                    
+                    <label for="number">Número:</label>
+                    <input type="text" id="number" name="number" placeholder="Digite o número" required>
+                    
+                    <label for="neighborhood">Bairro:</label>
+                    <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro" required>
+                    
+                    <label for="city">Complemento:</label>
+                    <input type="text" id="city" name="city" placeholder="Digite o Complemento" required>
+
+                    
+                    <label for="zip">CEP:</label>
+                    <input type="text" id="zip" name="zip" placeholder="Digite o CEP" required>
+                    
+                    <button type="button" onclick="saveAddress()">Salvar</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Modal para pagamento -->
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('paymentModal')">&times;</span>
+                <h2>Método de Pagamento</h2>
+                <form id="paymentForm">
+                    <label>
+                        <input type="radio" name="payment" value="card" onclick="showPaymentFields()"> Cartão de Crédito
+                    </label>
+                    <div id="cardFields" style="display: none;">
+                        <label for="cardNumber">Número do Cartão:</label>
+                        <input type="number" id="cardNumber" name="cardNumber" placeholder="Digite o número do cartão" pattern="\d*" inputmode="numeric">
+                        
+                        <label for="cardName">Nome no Cartão:</label>
+                        <input type="text" id="cardName" name="cardName" placeholder="Digite o nome no cartão">
+                        
+                        <label for="cardExpiry">Validade:</label>
+                        <input type="date" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" pattern="\d{2}/\d{2}" inputmode="numeric">
+                        
+                        <label for="cardCVV">CVV:</label>
+                        <input type="number" id="cardCVV" name="cardCVV" placeholder="CVV">
+                    </div>
+                    <label>
+                        <input type="radio" name="payment" value="pix" onclick="showPaymentFields()"> PIX
+                    </label>
+                    <div id="pixQRCode" style="display: none;">
+                        <img src="https://imgs.search.brave.com/gW3hG6LUoOEHDu7YI9Vt_TSng96W0lL6YQekJU4mtTQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91c2Vy/LWltYWdlcy5naXRo/dWJ1c2VyY29udGVu/dC5jb20vMjM2OTAx/NDUvODMzNDg3Mzkt/YzRmODhkMDAtYTM2/MS0xMWVhLTkzMmUt/ZTcyMmUwYmQxYjY1/LnBuZw" alt="QR Code Fictício">
+                    </div>
+                    <button type="button" onclick="savePayment()">Salvar</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
 </body>
 </html>

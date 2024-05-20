@@ -86,3 +86,4 @@ $(document).ready(function(){
         $(this).addClass("selecionado"); 
     });
 });
+

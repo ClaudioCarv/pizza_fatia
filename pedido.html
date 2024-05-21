@@ -17,6 +17,7 @@
     <nav class="naveg">
         <a href="index.html">Home</a>
         <a href="pedido.html">Pedido</a>
+        <a href="entregas.html">Entregas</a>
         <a href="#Sobre">Sobre</a>
     </nav>
     <div class="sabores">
@@ -24,19 +25,21 @@
     </div>
     
     <h1 class="t1">Seu Pedido</h1>
-    
-    <h1 class="saboresitem">Pedidos</h1>
-
+    <div class="saboresitem" >
+        <h1>Pedidos</h1>
+    </div>
     <div class="pedidos">
         <div class="order"></div>
     </div>
     <!-- total do pedido -->
+    <hr>
     <h2>Total: R$<span id="total-amount">0</span></h2>
     <div class="prosseguir">
         <button id="clear-order">Limpar Pedido</button>
     </div>
-    <h2>Recheios de borda</h2>
-    <div class="recheios">
+    <h2 class="verde">Recheios de borda</h2>
+    
+    <div class="recheios">    
         <span>Catupiry</span>
         <span>Alpino</span>
         <span>Cheddar</span>
@@ -45,21 +48,21 @@
     <div class="space">
         <div class="adds">
             <!-- Adicionais -->
-            <h2>Adicionais</h2>
+            <h2 class="verde">Adicionais</h2>
             <hr>
             <div class="spadds">
-                <span data-price="2.00">Queijo</span>
-                <span data-price="2.00">Tomate</span>
-                <span data-price="2.00">Molho pesto</span>
-                <span data-price="2.00">Azeitona</span>
-                <span data-price="2.00">Manjericão</span>
-                <span data-price="2.00">Orégano</span>
-                <span data-price="2.00">Cream Cheese</span>
+                <span>Queijo</span>
+                <span>Tomate</span>
+                <span>Molho pesto</span>
+                <span>Azeitona</span>
+                <span>Manjericão</span>
+                <span>Orégano</span>
+                <span>Cream Cheese</span>
             </div>
         </div>
         <div class="adds">
             <!-- Molhos -->
-            <h2>Molhos</h2>
+            <h2 class="verde">Molhos</h2>
             <hr>
             <div class="spadds">
                 <span>Maionese</span>
@@ -73,5 +76,8 @@
     <div class="prosseguir">
         <a href="carrinho.html"><button>Prosseguir</button></a>
     </div>
+    <footer>
+        <img class="imgfooter" src="img/TIA-FATIA-LOGO_TITLE.png" alt="">
+    </footer>
 </body>
 </html>

@@ -18,6 +18,7 @@
     <nav class="naveg">
         <a href="index.html">Home</a>
         <a href="pedido.html">Pedido</a>
+        <a href="entregas.html">Entregas</a>
         <a href="#Sobre">Sobre</a>
     </nav>
 
@@ -71,17 +72,16 @@
                     <input type="text" id="street" name="street" placeholder="Digite a rua" required>
                     
                     <label for="number">Número:</label>
-                    <input type="text" id="number" name="number" placeholder="Digite o número" required>
+                    <input type="text" id="number" name="number" placeholder="Digite o número" required oninput="validateNumber(this, 4)">
                     
                     <label for="neighborhood">Bairro:</label>
                     <input type="text" id="neighborhood" name="neighborhood" placeholder="Digite o bairro" required>
                     
                     <label for="city">Complemento:</label>
                     <input type="text" id="city" name="city" placeholder="Digite o Complemento" required>
-
                     
                     <label for="zip">CEP:</label>
-                    <input type="text" id="zip" name="zip" placeholder="Digite o CEP" required>
+                    <input type="text" id="zip" name="zip" placeholder="Digite o CEP" required oninput="validateNumber(this, 8)">
                     
                     <button type="button" onclick="saveAddress()">Salvar</button>
                 </form>
@@ -92,23 +92,23 @@
         <div id="paymentModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('paymentModal')">&times;</span>
-                <h2>Método de Pagamento</h2>
+                <p><strong>Método de Pagamento</strong></p>
                 <form id="paymentForm">
                     <label>
                         <input type="radio" name="payment" value="card" onclick="showPaymentFields()"> Cartão de Crédito
                     </label>
                     <div id="cardFields" style="display: none;">
                         <label for="cardNumber">Número do Cartão:</label>
-                        <input type="number" id="cardNumber" name="cardNumber" placeholder="Digite o número do cartão" pattern="\d*" inputmode="numeric">
+                        <input type="text" id="cardNumber" name="cardNumber" maxlength="16" placeholder="Digite o número do cartão" pattern="\d*" inputmode="numeric" oninput="validateCardNumber(this)">
                         
                         <label for="cardName">Nome no Cartão:</label>
                         <input type="text" id="cardName" name="cardName" placeholder="Digite o nome no cartão">
                         
                         <label for="cardExpiry">Validade:</label>
-                        <input type="date" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" pattern="\d{2}/\d{2}" inputmode="numeric">
+                        <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" maxlength="5" pattern="\d{2}/\d{2}" inputmode="numeric" oninput="validateCardExpiry(this)">
                         
                         <label for="cardCVV">CVV:</label>
-                        <input type="number" id="cardCVV" name="cardCVV" placeholder="CVV">
+                        <input type="text" id="cardCVV" name="cardCVV" maxlength="3" placeholder="CVV" pattern="\d*" inputmode="numeric" oninput="validateCardCVV(this)">
                     </div>
                     <label>
                         <input type="radio" name="payment" value="pix" onclick="showPaymentFields()"> PIX
@@ -122,7 +122,14 @@
         </div>
         
     </div>
-    <script src="script.js"></script>
+
+    <div class="prosseguir">
+        <a href="pedido.html"><button>Voltar</button></a>
+        <a href="entregas.html" onclick="finalizarPedido()"><button>Finalizar</button></a>
+    </div>
+    <footer>
+        <img class="imgfooter" src="img/TIA-FATIA-LOGO_TITLE.png" alt="">
+    </footer>
 </body>
 </html>
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="toolkit.css">
+    <script src="carrinho.js"></script>
+    <script src="entregas.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/Tia-fatia-logo.png" type="image/x-icon">
+    <title>Tia Fatia - Entregas</title>
+</head>
+<body>
+    <nav class="naveg">
+        <a href="index.html">Home</a>
+        <a href="pedido.html">Pedido</a>
+        <a href="entregas.html">Entregas</a>
+        <a href="#Sobre">Sobre</a>
+    </nav>
+    <div class="sabores">
+        <img class="logoS" src="img/logoS.png" alt="Logo tia Fatia">
+    </div>
+    <h1>Entregas</h1>
+    <div class="eecontainer">
+        <div class="econtainer">
+            <span>Pedido #58360000</span>
+            <span>Status: A caminho</span>
+            <button onclick="abrirModal()">Acompanhar</button>
+        </div>
+    </div>
+    <div class="prosseguir">
+        <a href="index.html"><button>Voltar</button></a>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalAcompanhamento" class="modalz">
+        <div class="modal-contentz">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Acompanhe seu pedido</h2>
+            <p id="pedidoNumero"></p>
+            <div class="status">
+                <span>Pedido confirmado</span>
+                <span>Em preparo</span>
+                <span>Saiu para entrega</span>
+            </div>
+            <div class="status-line">
+                <div class="dot" id="confirmado"></div>
+                <div class="line" id="line1"></div>
+                <div class="dot" id="preparo"></div>
+                <div class="line" id="line2"></div>
+                <div class="dot" id="entrega"></div>
+            </div>
+            <div id="progressoEntrega">
+                <p><strong>Status:</strong> <span id="statusEntrega"></span></p>
+            </div>
+            <div id="enderecoEntrega">
+                <h3>Endereço de entrega:</h3>
+                <p id="endereco"></p>
+            </div>
+            <div id="metodoPagamento">
+                <h3>Método de pagamento:</h3>
+                <p>Cartão com final <span id="finalCartao">9987</span></p>
+            </div>
+            <div id="retirada" style="display: none;">
+                <h3>Esperando a retirada</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

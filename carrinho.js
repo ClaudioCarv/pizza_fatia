@@ -1,3 +1,29 @@
+function validateCardNumber(input) {
+    // Remove qualquer caractere que não seja número e limita a 16 caracteres
+    input.value = input.value.replace(/\D/g, '').substring(0, 16);
+}
+
+function validateCardExpiry(input) {
+    // Remove qualquer caractere que não seja número ou barra
+    input.value = input.value.replace(/[^\d\/]/g, '');
+    
+    if (input.value.length === 2 && !input.value.includes('/')) {
+        input.value = input.value + '/';
+    }
+    if (input.value.length > 5) {
+        input.value = input.value.substring(0, 5);
+    }
+}
+// Remove qualquer caractere que não seja número e limita a 3 caracteres
+function validateCardCVV(input) {
+    
+    input.value = input.value.replace(/\D/g, '').substring(0, 3);
+}
+// Remove qualquer caractere que não seja número e limita ao comprimento máximo
+function validateNumber(input, maxLength) {
+    
+    input.value = input.value.replace(/\D/g, '').substring(0, maxLength);
+}
 
 function openModal(modalId) {
     document.getElementById(modalId).style.display = "block";
@@ -12,10 +38,9 @@ function saveAddress() {
     var number = document.getElementById('number').value;
     var neighborhood = document.getElementById('neighborhood').value;
     var city = document.getElementById('city').value;
-    var state = document.getElementById('state').value;
     var zip = document.getElementById('zip').value;
 
-    var address = `Rua ${street}, ${number}, ${neighborhood}, ${city}, ${state}, ${zip}`;
+    var address = `Rua ${street}, ${number}, ${neighborhood}, ${city}, ${zip}`;
     document.getElementById('addressDisplay').innerHTML = `<p><strong>Endereço</strong></p><p>${address}</p><span class="edit">Editar</span>`;
     closeModal('addressModal');
 }
@@ -65,7 +90,6 @@ function showPaymentFields() {
     document.getElementById('pixQRCode').style.display = selectedPayment === 'pix' ? 'block' : 'none';
 }
 
-
 function selecionarSpan(span) {
     var spans = document.querySelectorAll('.cpedido span'); 
     spans.forEach(function(item) {
@@ -73,3 +97,30 @@ function selecionarSpan(span) {
     });
     span.classList.add('cselecionado'); 
 }
+
+function finalizarPedido() {
+    var opcaoEntrega = document.querySelector('.cpedido .cselecionado');
+    var statusPedido = '';
+    var numeroPedido = Math.floor(Math.random() * 1000000); // Número aleatório de 6 dígitos
+
+    if (opcaoEntrega.textContent === 'Retirado') {
+        statusPedido = 'Aguardando Retirada';
+    } else if (opcaoEntrega.textContent === 'Entregue') {
+        statusPedido = 'A caminho';
+    }
+
+    // Obter endereço e método de pagamento
+    var endereco = document.querySelector('#addressDisplay p:nth-of-type(2)').textContent;
+    var metodoPagamento = document.querySelector('#paymentDisplay p:nth-of-type(1)').textContent + ' - ' + document.querySelector('#paymentDisplay p:nth-of-type(2)').textContent;
+
+    // Salvar informações no localStorage
+    localStorage.setItem('numeroPedido', numeroPedido);
+    localStorage.setItem('opcaoEntrega', opcaoEntrega.textContent);
+    localStorage.setItem('enderecoEntrega', endereco);
+    localStorage.setItem('metodoPagamento', metodoPagamento);
+
+    // Redirecionar para a página de entregas
+    window.location.href = 'entregas.html';
+}
+
+

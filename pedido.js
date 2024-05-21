@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const additionalOptions = document.querySelectorAll('.spadds span');
     
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-/* guardar os pedidos no localstorage */
+
     function renderOrder() {
         orderContainer.innerHTML = '';
         let totalAmount = 0;
@@ -24,8 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         totalAmountSpan.innerText = totalAmount.toFixed(2);
+
+        // Aplica a lógica de seleção ao final da renderização
+        applySelectionLogic();
     }
-/* funcionamento da edição de bordas e adicionais */
+
     function editItem(index) {
         const item = cart[index];
 
@@ -68,22 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function applySelectionLogic() {
+        $(".order-item").off('click').on('click', function(){
+            $(".order-item").removeClass("selecionado");
+            $(this).addClass("selecionado");
+        });
+    }
+
     renderOrder();
-    /* botão para limpar os pedidos */
+
     document.getElementById('clear-order').addEventListener('click', () => {
         localStorage.removeItem('cart');
         cart = [];
         renderOrder();
     });
 });
-
-
-
-/* seleção dos pedidos */
-$(document).ready(function(){
-    $(".order-item").click(function(){
-        $(".order-item").removeClass("selecionado"); 
-        $(this).addClass("selecionado"); 
-    });
-});
-

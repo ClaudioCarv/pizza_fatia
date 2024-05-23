@@ -28,7 +28,12 @@ h3{
     
     width: 20%;
 }
-
+.imgindex{
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    margin-top: 10px;
+}
 .logoS{
     animation: pulsa 2s ease-out infinite alternate-reverse;
     justify-content: center;
@@ -38,6 +43,7 @@ h3{
     align-content: center;
     margin-top: 50px;
 }
+
 footer{
     justify-content: center;
     align-items: center;
@@ -79,9 +85,9 @@ footer{
 }
 .naveg{
     top: 0;
-    z-index: 999;
-    margin: 0;
-    padding: 0;
+    z-index: 1000;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     width: 100%;
     position: fixed;
     border-bottom-left-radius: 15%;
@@ -92,13 +98,17 @@ footer{
 
 }
 .naveg, a{
-    color: aqua;
+    color: rgb(255, 255, 255);
     padding-left: 10px;
 }
 
-.naveg, a:hover{
-    transition: ease-in-out 1s;
-    color: #F1B020;
+.naveg img{
+    margin: 0px 15px 0px 0px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+nav img:active{
+    transform: scale(1.1) rotateZ(1.3deg);
 }
 .sabores{
     justify-content: center;
@@ -678,5 +688,104 @@ input {
 @keyframes pulsa {
     to {
         transform: scale(1.1); 
+    }
+}
+
+.hide {
+    display: none;
+}
+
+
+@media screen and (max-width: 732px){
+    
+    .naveg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 0px 0px 0px;
+        padding: 8px 0px 0px 0px;
+    }
+    .logoS{
+        margin: 75px 0px 0px 0px;
+        width: 50%;
+    }
+    .sabores{
+
+        justify-content: center;
+        align-items: center;
+        display: grid;
+    }
+    .saboresitem{
+        
+        flex-direction: column;
+    }
+    .pedidos{
+        margin: 25px 50px 50px 50px;
+        padding: 10px 10px 5px 10px;
+    }
+    .order-item:hover{
+        padding: 10px 10px 10px 10px;
+        margin: 0px 0px 0px 0px;
+    }
+    .order-item p{
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+    }
+    .recheios{
+        display: grid;
+    }
+    .recheios span{
+        margin: 0px 0px 0px 0px;
+    }
+    .selecionado{
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+    .address-section, .payment-section{
+        margin: 0px 10px 0px -10px;
+    }
+    .payment-section p{
+        margin: 15px 0px 0px 0px;
+    }
+    .space{
+        display: grid;
+    }
+    .spadds span:hover{
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+    .spadds span.selected{
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+    .cpedido{
+        margin: 0px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .cpedido span{
+        margin: 0px 0px 20px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+    .cpedido span:hover{
+        margin: 0px 0px 20px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+    .cpedido span.cselecionado{
+        margin: 0px 0px 20px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+    .prosseguir{
+        margin: 15px 0px 30px 0px;
+    }
+    .logo{
+        width: 65%;
+    }
+
+    .imgfooter{
+        width: 75%;
     }
 }

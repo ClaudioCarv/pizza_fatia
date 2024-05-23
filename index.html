@@ -20,13 +20,18 @@
     </div>
 <!-- Navegação -->
     <nav class="naveg">
-        <a href="#home">Home</a>
-        <a href="pedido.html">Pedido</a>
-        <a href="entregas.html">Entregas</a>
-        <a href="#Sobre">Sobre</a>
+        <a href="#home" onmouseover="trocarImagem('Nav_home_hover')" onmouseout="trocarImagem('home_nav')">
+            <img id="imagemNav" src="img/home_nav.png" alt="">
+        </a>
+        <a href="pedido.html" onmouseover="trocarImagem2('Nav_carrinho_hover')" onmouseout="trocarImagem2('carrinho_nav')">
+            <img id="imagemNav2" src="img/carrinho_nav.png" alt=""></a>
+        <a href="entregas.html"  onmouseover="trocarImagem3('Nav_entregas_hover')" onmouseout="trocarImagem3('entregas_nav')">
+            <img id="imagemNav3" src="img/entregas_nav.png" alt=""></a>
+        <a href="#Sobre"></a>
     </nav>
+
     <!-- Tela de sabores -->
-    <div id="home" class="sabores">
+    <div id="home" class="imgindex">
         <img class="logoS" src="img/logoS.png" alt="">
     </div>
 <!-- Salgados -->

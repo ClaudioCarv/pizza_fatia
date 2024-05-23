@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="toolkit.css">
     <script src="carrinho.js"></script>
     <script src="pedido.js"></script>
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,13 +17,17 @@
 </head>
 <body>
     <nav class="naveg">
-        <a href="index.html">Home</a>
-        <a href="pedido.html">Pedido</a>
-        <a href="entregas.html">Entregas</a>
-        <a href="#Sobre">Sobre</a>
+        <a href="index.html" onmouseover="trocarImagem('Nav_home_hover')" onmouseout="trocarImagem('home_nav')">
+            <img id="imagemNav" src="img/home_nav.png" alt="">
+        </a>
+        <a href="pedido.html" onmouseover="trocarImagem2('Nav_carrinho_hover')" onmouseout="trocarImagem2('carrinho_nav')">
+            <img id="imagemNav2" src="img/carrinho_nav.png" alt=""></a>
+        <a href="entregas.html"  onmouseover="trocarImagem3('Nav_entregas_hover')" onmouseout="trocarImagem3('entregas_nav')">
+            <img id="imagemNav3" src="img/entregas_nav.png" alt=""></a>
+        <a href="#Sobre"></a>
     </nav>
 
-    <div class="sabores">
+    <div class="imgindex">
         <img class="logoS" src="img/logoS.png" alt="">
     </div>
 

@@ -27,3 +27,13 @@ function addToCart(name, price) {
 }
 
 
+function trocarImagem(nomeImagem) {
+    document.getElementById("imagemNav").src = "img/" + nomeImagem + ".png";
+}
+function trocarImagem2(nomeImagem) {
+    document.getElementById("imagemNav2").src = "img/" + nomeImagem + ".png";
+}
+
+function trocarImagem3(nomeImagem) {
+    document.getElementById("imagemNav3").src = "img/" + nomeImagem + ".png";
+}

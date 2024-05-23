@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="toolkit.css">
-    <script src="pedido.js" defer></script>
+    <script src="pedido.js"></script>
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +16,16 @@
 </head>
 <body>
     <nav class="naveg">
-        <a href="index.html">Home</a>
-        <a href="pedido.html">Pedido</a>
-        <a href="entregas.html">Entregas</a>
-        <a href="#Sobre">Sobre</a>
+        <a href="index.html" onmouseover="trocarImagem('Nav_home_hover')" onmouseout="trocarImagem('home_nav')">
+            <img id="imagemNav" src="img/home_nav.png" alt="">
+        </a>
+        <a href="pedido.html" onmouseover="trocarImagem2('Nav_carrinho_hover')" onmouseout="trocarImagem2('carrinho_nav')">
+            <img id="imagemNav2" src="img/carrinho_nav.png" alt=""></a>
+        <a href="entregas.html"  onmouseover="trocarImagem3('Nav_entregas_hover')" onmouseout="trocarImagem3('entregas_nav')">
+            <img id="imagemNav3" src="img/entregas_nav.png" alt=""></a>
+        <a href="#Sobre"></a>
     </nav>
-    <div class="sabores">
+    <div class="imgindex">
         <img class="logoS" src="img/logoS.png" alt="">
     </div>
     

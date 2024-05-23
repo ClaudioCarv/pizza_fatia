@@ -9,15 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/Tia-fatia-logo.png" type="image/x-icon"> 
-
+    <link rel="icon" href="img/Tia-fatia-logo.png" type="image/x-icon">
     <title>Tia Fatia</title>
 </head>
 <body>
-    <!-- Tela de carregamento com logo -->
-    <div  id="loader">
-        <img class="logo" src="img/Tia-fatia-logo.png" alt="logo tia fatia">
-    </div>
 <!-- Navegação -->
     <nav class="naveg">
         <a href="#home" onmouseover="trocarImagem('Nav_home_hover')" onmouseout="trocarImagem('home_nav')">
@@ -86,23 +81,23 @@
     <h1 class="titulos">Combos</h1>
     <div class="saboresitem">
         <div class="sabores">
-            <div class="saboresitem">
+            <div class="saboresitem" id="Combo">
                 <img class="sabimg" src="img/combos_fundo.png" alt="Combo - 2 Salgados + Refrigerante">
                 <h2>2 Salgados + Refri</h2>
                 <h3>R$ 8.50</h3>
-                <button class="add-to-cart"  onclick="addToCart('Combo - 2 Salgados + Refrigerante', 8.50), exibirPopUp()">Adicionar ao Pedido</button>
+                <button id="Combo" class="add-to-cart"  onclick="addToCart('Combo - 2 Salgados + Refrigerante', 8.50), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
-            <div class="saboresitem">
+            <div class="saboresitem" id="Combo">
                 <img class="sabimg" src="img/combos_fundo.png" alt="Combo - 2 Doces + 1 Salgado + Suco">
                 <h2>2 Doces + 1 Salgado + Suco</h2>
                 <h3>R$ 10.00</h3>
-                <button class="add-to-cart"  onclick="addToCart('Combo - 2 Doces + 1 Salgado + Suco', 10.00), exibirPopUp()">Adicionar ao Pedido</button>
+                <button id="Combo" class="add-to-cart"  onclick="addToCart('Combo - 2 Doces + 1 Salgado + Suco', 10.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
-            <div class="saboresitem">
+            <div class="saboresitem" id="Combo">
                 <img class="sabimg" src="img/combos_fundo.png" alt="Combo - 1 Doce + Bebida">
                 <h2>1 Doce + Bebida</h2>
                 <h3>R$ 6.00</h3>
-                <button class="add-to-cart"  onclick="addToCart('Combo - 1 Doce + Bebida', 6.00), exibirPopUp()">Adicionar ao Pedido</button>
+                <button  class="add-to-cart"  onclick="addToCart('Combo - 1 Doce + Bebida', 6.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
         </div>
     </div>
@@ -110,23 +105,23 @@
     <h1 class="titulos">Bebidas</h1>
     <div class="saboresitem">
         <div class="sabores">
-            <div class="saboresitem">
+            <div class="saboresitem" id="Bebida">
                 <img class="sabimg" src="img/copo_refrigerante.png" alt="">
                 <h2>Refrigerante</h2>
                 <h3>R$ 3.00</h3>
-                <button class="add-to-cart"  onclick="addToCart('Dollynho', 3.00), exibirPopUp()">Adicionar ao Pedido</button>
+                <button  class="add-to-cart"  onclick="addToCart('Dollynho', 3.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
-            <div class="saboresitem">
+            <div class="saboresitem" id="Bebida">
                 <img class="sabimg" src="img/Sucos_naturais.png" alt="">
                 <h2>Sucos naturais</h2>
                 <h3>R$ 4.00</h3>
-                <button class="add-to-cart"  onclick="addToCart('Suco de Maracuja', 4.00), exibirPopUp()">Adicionar ao Pedido</button>
+                <button id="Bebida" class="add-to-cart"  onclick="addToCart('Suco de Maracuja', 4.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
-            <div class="saboresitem">
+            <div class="saboresitem" id="Bebida">
                 <img class="sabimg" src="img/vinho.png" alt="">
                 <h2>Vinhos</h2>
                 <h3>R$ 50.00</h3>
-                <button class="add-to-cart"  onclick="addToCart('Vinho', 50.00), exibirPopUp()">Adicionar ao Pedido</button>
+                <button id="Bebida" class="add-to-cart"  onclick="addToCart('Vinho', 50.00), exibirPopUp()">Adicionar ao Pedido</button>
             </div>
         </div>
     </div>

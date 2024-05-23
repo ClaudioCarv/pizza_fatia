@@ -1,7 +1,6 @@
 
 body{
     font-family: "Inknut Antiqua", serif;
-    
     background-color: #F5DFAD;
     margin: 0;
     padding: 0;
@@ -680,6 +679,107 @@ input {
 #metodoPagamento h3{
     margin: -25px 0px -25px 0px;
 }
+
+.divcontainer {
+    margin: -25px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    margin: 0px 0px 30px 0px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #E3C596;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1 3px 40px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    background-color: #F5DFAD ;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+
+.form-group input {
+    background-color: #F5DFAD ;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    width: 100%;
+    margin: 15px 50px 0px 0px;
+    text-align: center;
+    padding: 10px;
+    background-color: #2A5237;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: #2A5237;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+    
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.grid a{
+    color: #2A5237;
+    display: grid;
+}
+
+
 @keyframes subir{
     0% { transform: translateY(0); }
     100% { transform: translateY(-100%); }

@@ -6,14 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-
     var saborItems = document.querySelectorAll('.saboresitem');
 
     // Adiciona um evento de clique a cada um desses elementos
     saborItems.forEach(function(item) {
         item.addEventListener('click', function() {
             // Verifica se o item clicado é um refrigerante ou combo
-            if (this.querySelector('h2').textContent.toLowerCase().includes('refrigerante') || this.querySelector('h2').textContent.toLowerCase().includes('combo')) {
+            if (this.classList.contains('bebida') || this.classList.contains('combo')) {
                 // Oculta as opções de recheio de borda e adicionais
                 document.querySelectorAll('.recheios, .adds').forEach(function(element) {
                     element.classList.add('hide');
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
 
     function renderOrder() {
         orderContainer.innerHTML = '';
@@ -53,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function editItem(index) {
         const item = cart[index];
-        
         
         borderOptions.forEach(option => {
             option.classList.remove('selected');
@@ -109,5 +106,3 @@ document.addEventListener('DOMContentLoaded', () => {
         renderOrder();
     });
 });
-
-

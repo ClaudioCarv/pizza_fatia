@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="toolkit.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/Tia-fatia-logo.png" type="image/x-icon"> 
+    <title>Tia Fatia - Cadastre-se</title>
+</head>
+<body>
+    <div class="imgindex">
+        <img class="logoS" src="img/logoS.png" alt="">
+    </div>
+    <h1 class="t1">Cadastro</h1>
+    <div class="divcontainer">
+        <div class="form-container">
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="emailOrPhone">Email ou Telefone:</label>
+                    <input type="text" id="emailOrPhone" name="emailOrPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Senha:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+            <div class="grid">
+                <p>Já possui uma conta?<a href="login.html">Entrar</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
